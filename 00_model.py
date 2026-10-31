@@ -26,7 +26,7 @@ compair_df = pd.DataFrame({
 
 compair_df["Difference"] = abs(compair_df["Actual"] - compair_df["Predict"]).round(2)
 
-mae = mean_absolute_error(predctions, y_test)
+mae = mean_absolute_error(y_test, predctions)
 print(f"MAE:  {mae:.2f}")
 
 THRESHOLD = 1500
@@ -39,6 +39,7 @@ print(f"Anotomies: {len(anotomies)}")
 # print(compair_df.head().to_string(index = False))
 
 
+print(df["power_watts"].describe())
 
 
 

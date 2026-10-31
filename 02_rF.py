@@ -47,4 +47,3 @@ print(f"Anotomies: {len(anotomies)}")
 
 
 
-
