@@ -7,9 +7,7 @@ data = pd.read_csv("dataset.csv")
 
 df = pd.DataFrame(data)
 
-# plt.hist(df["voltage_v"])
-# print(df.columns)
-# print(df.nunique())
+df["timestamp"] = pd.to_datetime(df["timestamp"])
 
-plt.bar(df["device_id"], df["energy_kwh"])
-plt.show()
+print(df.describe())
+
